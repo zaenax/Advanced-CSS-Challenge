@@ -1,0 +1,159 @@
+:root{
+    --backgrndcolor: #dcd3c9;
+    ---textcolor: #dcd3c9;
+    --secondary-background-color: #000;
+    --primary-font: arial, sans-serif;
+    --other-color: #94a8b3;
+}
+
+*{
+    font-family: var(--primary-font);
+}
+body{
+    margin: 0;
+    background-color: var(--backgrndcolor);
+}
+header{
+    background-color: var(--secondary-background-color);
+    color: var(---textcolor);
+    text-align: center;
+    padding: 1em;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+
+}
+header h1 a{
+        text-decoration: none;
+        color: var(--textcolor);
+}
+
+nav{
+    position: absolute;
+    top: 50%;
+    right: 40px;
+    transform: translateY(-50%);
+    
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+nav li{
+    margin: 0 10px;
+}
+
+nav a{
+    text-decoration: none;
+    color: var(---textcolor);
+}
+
+.contact a {
+    text-decoration: none;
+    color: #000;
+    margin: 0 10px;
+    font-size: 20px;
+}
+main {
+    max-width: 1600px;
+    margin: 80px auto 20px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color:#dedcde;
+}
+
+main figure{
+    display: flex;
+    justify-content: center;
+    top: 0;
+
+}
+main figure img{
+    border-radius: 8px;
+}
+
+p{
+    line-height: 1.6;
+}
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: var(--secondary-background-color);
+    color: var(---textcolor);
+}
+.contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navlinkpos{
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.image-container img {
+    max-width: 48%;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+section figure img:hover{
+    box-shadow: inset 0px 0px 8px#000, 0 0 15px #000;
+}
+
+.image-container:hover{
+    cursor: pointer;
+    
+}
+.image-container:first-child{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.contact a:hover{
+    text-decoration: underline;
+    color: purple;
+}
+
+@media screen and (max-width: 768px){
+
+    nav{
+        position: static;
+        margin-top: 20px;
+        margin-left: 45%;
+        text-align: center;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+
+    }
+    nav li{
+        margin: 2px 0;
+    }
+    h1 {
+        display: none;
+    }
+    .image-container:first-child{
+        flex-grow: 1;
+    }
+    figure img{
+        max-width: 100%;
+        transition: 2s ease-in-out;
+    }
+}
